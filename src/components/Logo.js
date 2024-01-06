@@ -3,7 +3,7 @@ import React from "react";
 function Logo() {
   return (
     <div className=" md:px-22 px-6 py-10">
-      <div className="flex gap-6 flex-wrap justify-between md:justify-center items-center">
+      <div className="flex gap-6 flex-wrap justify-center items-center">
         <img src="/nust.svg" alt="nust" className=" h-3 md:h-5 lg:h-7 " />
         <img src="/mira.svg" alt="mira" className=" h-3 md:h-5 lg:h-7" />
         <img src="/lottie.svg" alt="lottie" className=" h-3 md:h-5 lg:h-7" />

@@ -9,7 +9,7 @@ function Navbar() {
     setToggle(!toggle);
   };
   return (
-    <div className=" py-5 px-6 md:px-20 lg:px-28">
+    <div className=" py-4 px-6 md:px-20 lg:px-28 border-b">
       <div className="md:px-18 h-10 flex justify-between  items-center font-bold">
         <h1 className=" text-2xl font-bold">Mode UI</h1>
         <div>
