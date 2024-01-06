@@ -3,7 +3,7 @@ import { FaArrowRight } from "react-icons/fa";
 
 function HeroSection() {
   return (
-    <div className="flex justify-center pt-20">
+    <div className="flex justify-center pt-10">
       <div className=" md:w-[700px]  text-center p-7">
         <div>
           <span className=" text-sm">Seamless experience</span>

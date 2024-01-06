@@ -1,5 +1,6 @@
 import "./App.css";
 import Feature1 from "./components/Feature1";
+import Feature2 from "./components/Feature2";
 import HeroSection from "./components/HeroSection";
 import Logo from "./components/Logo";
 import Navbar from "./components/Navbar";
@@ -20,7 +21,8 @@ function App() {
       <Navbar />
       <HeroSection />
       <Logo />
-      <Feature1/>
+      <Feature1 />
+      <Feature2 />
     </div>
   );
 }

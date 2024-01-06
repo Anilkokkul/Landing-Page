@@ -15,13 +15,14 @@ function Navbar() {
         <div>
           <ul className="lg:flex gap-4 opacity-70 hidden ">
             <li>
-              Card Access <img src="/chevron-down.png" alt="down" className=" inline" />{" "}
+              Card Access{" "}
+              <img src="/chevron-down.png" alt="down" className=" inline" />{" "}
             </li>
-            <li>Banking</li>
-            <li>Processing</li>
-            <li>About</li>
-            <li>Carrier</li>
-            <li>Contact</li>
+            <li className=" cursor-pointer">Banking</li>
+            <li className=" cursor-pointer">Processing</li>
+            <li className=" cursor-pointer">About</li>
+            <li className=" cursor-pointer">Carrier</li>
+            <li className=" cursor-pointer">Contact</li>
           </ul>
         </div>
         <div className="flex items-center gap-5">
@@ -50,22 +51,22 @@ function Navbar() {
         } lg:hidden`}
       >
         <ul className="text-start max-w-96 bg-slate-300 w-full absolute rounded-md transition overflow-hidden">
-          <li className=" hover:bg-slate-600 hover:text-white transition duration-700 h-8 leading-8 px-3 tracking-wide">
+          <li className=" hover:bg-slate-600 hover:text-white transition duration-700 h-8 leading-8 px-3 tracking-wide cursor-pointer">
             Card Access ▼
           </li>
-          <li className=" hover:bg-slate-600 hover:text-white transition duration-700 h-8 px-3 leading-8 tracking-wide">
+          <li className=" hover:bg-slate-600 hover:text-white transition duration-700 h-8 px-3 leading-8 tracking-wide cursor-pointer">
             Banking
           </li>
-          <li className=" hover:bg-slate-600 hover:text-white transition duration-700 h-8 px-3 leading-8 tracking-wide">
+          <li className=" hover:bg-slate-600 hover:text-white transition duration-700 h-8 px-3 leading-8 tracking-wide cursor-pointer">
             Processing
           </li>
-          <li className=" hover:bg-slate-600 hover:text-white transition duration-700 h-8 px-3 leading-8 tracking-wide">
+          <li className=" hover:bg-slate-600 hover:text-white transition duration-700 h-8 px-3 leading-8 tracking-wide cursor-pointer">
             About
           </li>
-          <li className=" hover:bg-slate-600 hover:text-white transition duration-700 h-8 px-3 leading-8 tracking-wide">
+          <li className=" hover:bg-slate-600 hover:text-white transition duration-700 h-8 px-3 leading-8 tracking-wide cursor-pointer">
             Carrier
           </li>
-          <li className=" hover:bg-slate-600 hover:text-white transition duration-700 h-8 px-3 leading-8 tracking-wide">
+          <li className=" hover:bg-slate-600 hover:text-white transition duration-700 h-8 px-3 leading-8 tracking-wide cursor-pointer">
             Contact
           </li>
         </ul>
