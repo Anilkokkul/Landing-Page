@@ -3,11 +3,11 @@ import { FaArrowRight } from "react-icons/fa";
 
 function HeroSection() {
   return (
-    <div className="flex justify-center pt-10">
+    <div className="flex justify-center pt-10 relative">
       <div className=" md:w-[700px]  text-center p-7">
         <div>
           <span className=" text-sm">Seamless experience</span>
-          <h1 className=" md:text-5xl text-4xl mt-4">
+          <h1 className=" md:text-6xl font-bold text-4xl mt-5">
             Unleashing the Next Generation of Card Solutions
           </h1>
           <p className="mt-4 md:px-14">
@@ -23,6 +23,7 @@ function HeroSection() {
           <div>*No credit card required</div>
         </div>
       </div>
+      <img src="/Mesh.png" alt="bg" className=" absolute -z-10 p-7 md:w-[550px] opacity-70 lg:w-[600px] lg:top-2" />
     </div>
   );
 }
