@@ -1,9 +1,13 @@
 import "./App.css";
+import CallToAction from "./components/CallToAction";
+import Description from "./components/Description";
 import Feature1 from "./components/Feature1";
 import Feature2 from "./components/Feature2";
+import Footer from "./components/Footer";
 import HeroSection from "./components/HeroSection";
 import Logo from "./components/Logo";
 import Navbar from "./components/Navbar";
+import Testimonials from "./components/Testimonials";
 
 function App() {
   return (
@@ -13,7 +17,7 @@ function App() {
           <span className=" py-1 px-2 bg-slate-200 rounded-xl text-xs h-6">
             Announcement
           </span>
-          <p>
+          <p className=" text-xs">
             We are happy to announce that we raise $2 Million in Seed Funding
           </p>
         </div>
@@ -23,6 +27,10 @@ function App() {
       <Logo />
       <Feature1 />
       <Feature2 />
+      <Description />
+      <Testimonials />
+      <CallToAction />
+      <Footer />
     </div>
   );
 }

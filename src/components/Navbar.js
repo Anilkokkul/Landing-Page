@@ -34,13 +34,13 @@ function Navbar() {
             onClick={handleToggle}
           >
             {toggle ? (
-              <span>
+              <div>
                 <MdOutlineClose />
-              </span>
+              </div>
             ) : (
-              <span>
+              <div>
                 <AiOutlineMenu />
-              </span>
+              </div>
             )}
           </div>
         </div>
@@ -50,9 +50,10 @@ function Navbar() {
           toggle ? "" : "hidden"
         } lg:hidden`}
       >
-        <ul className="text-start max-w-96 bg-slate-300 w-full absolute rounded-md transition overflow-hidden">
+        <ul className="text-start sm:max-w-96 bg-slate-300 absolute rounded-md transition overflow-hidden">
           <li className=" hover:bg-slate-600 hover:text-white transition duration-700 h-8 leading-8 px-3 tracking-wide cursor-pointer">
-            Card Access ▼
+            Card Access{" "}
+            <img src="/chevron-down.png" alt="down" className=" inline" />
           </li>
           <li className=" hover:bg-slate-600 hover:text-white transition duration-700 h-8 px-3 leading-8 tracking-wide cursor-pointer">
             Banking
