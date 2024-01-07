@@ -54,7 +54,7 @@ const Component = ({ item }) => {
 
 function Footer() {
   return (
-    <div className=" p-6">
+    <div className=" p-7">
       <div className=" pb-8 border-b  lg:px-60 mx-auto">
         <h2 className=" font-bold text-center lg:text-4xl md:text-3xl text-2xl">
           Mode UI
