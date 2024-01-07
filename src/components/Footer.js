@@ -41,7 +41,7 @@ const Component = ({ item }) => {
             <li
               key={i}
               className=" py-1
-          text-xs font-medium leading-snug text-gray-700"
+          text-xs font-medium leading-snug text-gray-700 cursor-pointer"
             >
               {linkItem}
             </li>
@@ -71,10 +71,14 @@ function Footer() {
         })}
       </div>
       <div className=" md:text-center mt-4">
-        <div className=" text-slate-700 flex gap-6 md:justify-center  text-xl md:text-2xl ">
-          <FaGithub />
-          <FaLinkedin />
-          <img src="/social.svg" alt="social" />
+        <div className=" text-slate-700 flex gap-6 md:justify-center  text-xl md:text-2xl  ">
+          <FaGithub className="cursor-pointer" />
+          <FaLinkedin className="cursor-pointer" />
+          <img
+            src="/social.svg"
+            alt="social"
+            className="cursor-pointer md:w-6"
+          />
         </div>
         <div className="mt-4">© 2023 Mode UI Inc. All Rights Reserved.</div>
       </div>
