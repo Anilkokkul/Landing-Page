@@ -50,7 +50,7 @@ function Navbar() {
           toggle ? "" : "hidden"
         } lg:hidden`}
       >
-        <ul className="text-start sm:max-w-96 bg-slate-300 absolute rounded-md transition overflow-hidden">
+        <ul className="text-start sm:max-w-96 bg-slate-300 absolute z-30 rounded-md transition overflow-hidden">
           <li className=" hover:bg-slate-600 hover:text-white transition duration-700 h-8 leading-8 px-3 tracking-wide cursor-pointer">
             Card Access{" "}
             <img src="/chevron-down.png" alt="down" className=" inline" />

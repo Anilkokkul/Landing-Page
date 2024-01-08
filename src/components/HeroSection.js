@@ -23,7 +23,11 @@ function HeroSection() {
           <div>*No credit card required</div>
         </div>
       </div>
-      <img src="/Mesh.png" alt="bg" className=" absolute -z-10 p-7 md:w-[550px] opacity-70 lg:w-[600px] lg:top-2" />
+      <img
+        src="/Mesh.png"
+        alt="bg"
+        className=" absolute -z-10 p-7 md:w-[550px]  lg:w-[600px] lg:top-2"
+      />
     </div>
   );
 }
