@@ -1,18 +1,31 @@
 import React, { useState } from "react";
 import { AiOutlineMenu } from "react-icons/ai";
 import { MdOutlineClose } from "react-icons/md";
+import { url } from "../url";
+import { Link } from "react-router-dom";
 
-function Navbar() {
+function Navbar({ navLogo }) {
   const [toggle, setToggle] = useState(false);
+
+  const logoUrl = `${url}/uploads/${navLogo}`;
 
   const handleToggle = () => {
     setToggle(!toggle);
   };
   return (
     <div className="relative ">
+      <button className=" absolute z-40 left-3 top-[100px] animate-bounce	  bg-fuchsia-950 p-2 font-bold rounded-md text-center  text-white my-4 w-48 ">
+        <Link to={"/admin"}>Go to Admin panel</Link>
+      </button>
       <div className=" py-4 px-6 md:px-20 lg:px-28 border-b relative z-30 bg-white">
         <div className="md:px-18 h-10 flex justify-between  items-center font-bold">
-          <h1 className=" text-2xl font-extrabold tracking-wide">Mode UI</h1>
+          <div>
+            <img
+              src={logoUrl}
+              alt="logo"
+              className="max-w-20 max-h-16 object-contain"
+            />{" "}
+          </div>
           <div>
             <ul className="lg:flex gap-4 opacity-70 hidden ">
               <li>
@@ -57,11 +70,7 @@ function Navbar() {
         >
           <li className=" hover:bg-fuchsia-600 rounded hover:text-white transition duration-700 h-8 leading-8 px-3 tracking-wide cursor-pointer">
             Card Access{" "}
-            <img
-              src="/chevron-down.svg"
-              alt="down"
-              className=" inline"
-            />
+            <img src="/chevron-down.svg" alt="down" className=" inline" />
           </li>
           <li className=" hover:bg-fuchsia-600 rounded hover:text-white transition duration-700 h-8 px-3 leading-8 tracking-wide cursor-pointer">
             Banking

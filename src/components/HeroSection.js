@@ -1,7 +1,7 @@
 import React from "react";
 import { FaArrowRight } from "react-icons/fa";
 
-function HeroSection() {
+function HeroSection({ content }) {
   return (
     <div className="flex justify-center pt-10 relative">
       <div className=" md:w-[700px]  text-center p-7">
@@ -17,7 +17,7 @@ function HeroSection() {
         </div>
         <div className="text-center">
           <button className=" bg-fuchsia-950 p-2 font-bold rounded-md text-white my-4 w-full sm:w-48">
-            Unlock your Card
+            {content}
             <FaArrowRight className="mx-1 inline h-4 0-1" />
           </button>
           <div>*No credit card required</div>

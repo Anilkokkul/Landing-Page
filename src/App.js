@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import "./App.css";
 import CallToAction from "./components/CallToAction";
 import Description from "./components/Description";
@@ -8,8 +9,34 @@ import HeroSection from "./components/HeroSection";
 import Logo from "./components/Logo";
 import Navbar from "./components/Navbar";
 import Testimonials from "./components/Testimonials";
+import { url } from "./url";
+import axios from "axios";
 
 function App() {
+  const [navLogo, setNavLogo] = useState("");
+  const [content, setContent] = useState("");
+  useEffect(() => {
+    axios
+      .get(`${url}/logo`)
+      .then((data) => {
+        setNavLogo(data.data[0].logo);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, []);
+
+  useEffect(() => {
+    axios
+      .get(`${url}/get-text`)
+      .then((data) => {
+        setContent(data.data[0].text);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, []);
+
   return (
     <div>
       <div className=" h-md-10 py-2 px-5 border-b bg-white relative z-30">
@@ -22,8 +49,8 @@ function App() {
           </p>
         </div>
       </div>
-      <Navbar />
-      <HeroSection />
+      <Navbar navLogo={navLogo} />
+      <HeroSection content={content} />
       <Logo />
       <Feature1 />
       <Feature2 />
