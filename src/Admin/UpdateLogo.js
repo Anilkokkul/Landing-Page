@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import axios from "axios";
 import { url } from "../url";
 import { errorToast, toastSuccess } from "../Toastify/toasts";
 
 function UpdateLogo() {
   const [logo, setLogo] = useState("");
+  const fileInputRef = useRef(null);
   const handleLogoChange = (e) => {
     setLogo(e.target.files[0]);
   };
@@ -17,7 +18,9 @@ function UpdateLogo() {
       .post(`${url}/upload`, formData)
       .then((data) => {
         toastSuccess("Image has been uploaded successfully!");
-        // console.log(data.data);
+        if (fileInputRef.current) {
+          fileInputRef.current.value = "";
+        }
       })
       .catch((error) => {
         errorToast("Error in Uploading");
@@ -39,6 +42,7 @@ function UpdateLogo() {
             onChange={handleLogoChange}
             required
             className=" w-2/3 border p-1"
+            ref={fileInputRef}
           />
         </label>
         <button

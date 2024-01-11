@@ -1,27 +1,25 @@
 import React, { useState } from "react";
 import { AiOutlineMenu } from "react-icons/ai";
 import { MdOutlineClose } from "react-icons/md";
-import { url } from "../url";
 import { Link } from "react-router-dom";
 
 function Navbar({ navLogo }) {
   const [toggle, setToggle] = useState(false);
 
-  const logoUrl = `${url}/uploads/${navLogo}`;
 
   const handleToggle = () => {
     setToggle(!toggle);
   };
   return (
     <div className="relative ">
-      <button className=" absolute z-40 left-3 top-[100px] animate-bounce	  bg-fuchsia-950 p-2 font-bold rounded-md text-center  text-white my-4 w-48 ">
+      <button className=" absolute z-40 left-3 top-[90px] animate-bounce	  bg-fuchsia-950 p-2 font-bold rounded-md text-center  text-white my-4 w-48 ">
         <Link to={"/admin"}>Go to Admin panel</Link>
       </button>
       <div className=" py-4 px-6 md:px-20 lg:px-28 border-b relative z-30 bg-white">
         <div className="md:px-18 h-10 flex justify-between  items-center font-bold">
           <div>
             <img
-              src={logoUrl}
+              src={navLogo}
               alt="logo"
               className="max-w-20 max-h-16 object-contain"
             />{" "}
